@@ -1,18 +1,25 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { Router, BrowserRouter as router} from 'react-router-dom';
+import Home from './pages/Home';
+import Rules from './pages/Rules';
+import Events from './pages/Events';
+import Contact from './pages/Contact';
 
-function App() {
-  return (
-    <>
-    <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/' exact />
-        </Switch>
-      </Router>
-    </>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/rules" element={<Rules />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </main>
+        </Router>
+    );
+};
 
 export default App;
