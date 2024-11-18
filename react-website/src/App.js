@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+<<<<<<< Updated upstream
 import Home from './pages/Home';
 import Rules from './pages/Rules';
 import Events from './pages/Events';
@@ -21,5 +22,24 @@ const App = () => {
         </Router>
     );
 };
+=======
+import { Route,createBrowserRouter,
+  createRoutesFromElements ,RouterProvider} from 'react-router-dom';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/'>
+        <Route index element={<Navbar />} />
+        {/*<Route path='/page' element={<Page />}/> */}
+      </Route>
+  )
+)
+
+function App() {
+  return (
+      <RouterProvider router={router}/>
+  );
+}
+>>>>>>> Stashed changes
 
 export default App;
