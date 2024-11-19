@@ -23,17 +23,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <div>
-    <Route path='/'>
-    <Route index element={<Home/>}/>
-    <Route path='/Contact' element={<Contact />}/>
-    <Route path='/Events' element={<Events />}/>
-    <Route path='/Rules' element={<Rules />}/>
-  </Route>
-  </div>
-  </>
+      <RouterProvider router={router}/>
   );
 }
 

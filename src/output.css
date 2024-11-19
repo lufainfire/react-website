@@ -1,0 +1,10 @@
+@tailwind components/Navbar.css;
+
+input {
+  background-color: white;
+  padding: 10px;
+}
+
+input:disabled {
+  background-color: gray;
+}
